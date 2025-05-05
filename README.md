@@ -40,8 +40,12 @@
   - **Line 33**: Incorrect property name used for the user object; the referenced property does not exist in the API response.
 
 ### 💡 Thought Process
-- I manually followed the API endpoint in the browser to inspect the structure of the returned JSON.
-- I discovered a mismatch between the expected frontend data structure and the actual API response, which caused rendering issues and `undefined` errors.
+- I started by live testing the app in the browser and checking the console.
+- By observing both the web page and the console, I noticed that the src path could not be found.
+- I then inspected the index.html file and corrected the script path to src/app.tsx.
+- After this fix, the web app loaded and displayed correctly, but the user names were empty.
+- I manually followed the API endpoint in the browser to inspect the structure of the returned JSON
+- I discovered a mismatch in the property name used in the code and the actual property name in the API response.
 
 ---
 
